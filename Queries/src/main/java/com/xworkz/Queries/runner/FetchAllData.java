@@ -1,8 +1,8 @@
-package com.xworkz.waterBottel.runner;
+package com.xworkz.Queries.runner;
 
 import java.sql.*;
 
-public class FetchById {
+public class FetchAllData {
     public static void main(String[] args) {
         Connection connection = null;
         Statement statement = null;
@@ -13,7 +13,7 @@ public class FetchById {
             String password = "root";
             connection = DriverManager.getConnection(url, userName, password);
             statement = connection.createStatement();
-            String query = "select * from product_info where p_id=2 ";
+            String query = "select * from product_info";
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
